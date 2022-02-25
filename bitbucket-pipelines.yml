@@ -1,0 +1,14 @@
+image: node:14.17.0
+
+pipelines:
+  branches:
+    master:
+      - step:
+          name: Deploy to Expo Dev (https://expo.dev/@zendev/HV-ZenZone?release-channel=high-voltage)
+          deployment: staging
+          script:
+            - npm i
+            - npm i expo-cli
+            - npx expo login --username $EXPO_USERNAME --password $EXPO_PASSWORD
+            - npx expo publish --release-channel high-voltage
+            - npx expo logout
