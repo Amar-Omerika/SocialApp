@@ -1,7 +1,7 @@
 # SocialApp
 
 # Tools
-This App was buidl using react native
+This App was build using react native
 
 # About
 
